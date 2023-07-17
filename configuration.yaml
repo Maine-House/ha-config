@@ -12,5 +12,3 @@ scene: !include scenes.yaml
 # Load integrations
 http:
 api:
-
-# Loaded
