@@ -12,3 +12,15 @@ scene: !include scenes.yaml
 # Load integrations
 http:
 api:
+
+rest:
+  - resource: "http://date.jsontest.com/"
+    sensor:
+      - name: "Time"
+        value_template: "{{ value_json.time }}"
+
+      - name: "Date"
+        value_template: "{{ value_json.date }}"
+
+      - name: "Milliseconds"
+        value_template: "{{ value_json.milliseconds_since_epoch }}"
